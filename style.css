@@ -1,0 +1,164 @@
+body {
+  font-family: 'Cairo', sans-serif;
+  margin: 20px;
+  background-color: #f8f8f8;
+  direction: rtl;
+  text-align: center;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.animated-text {
+  color: red;
+  font-size: 18px;
+  animation: pulse 2s infinite;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+.news-ticker {
+  background: #eee;
+  padding: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.ticker-content {
+  display: inline-block;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.center-container {
+  margin: 20px 0;
+}
+
+select, input {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 300px;
+}
+
+.card {
+  background: #fff;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+  text-align: right;
+  line-height: 1.8;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+  color: gray;
+}
+
+/* 📱 التصميم المتجاوب */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .animated-text {
+    font-size: 16px;
+  }
+
+  .card {
+    font-size: 14px;
+  }
+
+  select, input {
+    font-size: 14px;
+    width: 90%;
+  }
+
+  .ticker-content {
+    font-size: 13px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+#darkModeToggle {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+#darkModeToggle:hover {
+  background-color: #555;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+body.dark-mode select,
+body.dark-mode input {
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #555;
+}
+
+body.dark-mode .news-ticker {
+  background-color: #222;
+  color: #fff;
+}
+
+body.dark-mode a {
+  color: #42a5f5;
+}
+#darkModeToggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 999;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#darkModeToggle:hover {
+  background-color: #555;
+}

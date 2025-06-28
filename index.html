@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>وين طريقك؟</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 style="text-align:center;color:#2c3e50;">🚧 وين طريقك؟ 🚧</h1>
+<button id="darkModeToggle" onclick="toggleDarkMode()">🌙</button>
+<p class="animated-text" style="color:red; font-family: 'Cairo', sans-serif;">تابع حالة الحواجز في الضفة الغربية والقدس لحظة بلحظة رافقتكم السلامة</p>
+
+<div class="news-ticker">
+  <div class="ticker-content">
+    🔴 حاجز حوارة مغلق — 🟡 حاجز زعترة أزمة — 🟢 حاجز بيت إيل سالك — 🔴 حاجز قلنديا مغلق — 🟢 حاجز الجلمة سالك — 🟡 حاجز عطارة يشهد أزمة مرورية —
+  </div>
+</div>
+
+<!-- 🔍 خانة البحث -->
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="🔍 ابحث عن حاجز..." onkeyup="searchCheckpoints()">
+</div>
+
+<!-- اختيار المحافظة -->
+<div class="center-container">
+  <h2>اختر المحافظة:</h2>
+  <select id="governorateSelect" onchange="loadCheckpoints()">
+    <option disabled selected>-- اختر المحافظة --</option>
+    <option value="ضواحي القدس">ضواحي القدس</option>
+    <option value="رام الله">رام الله</option>
+    <option value="جنين">جنين</option>
+    <option value="أريحا">أريحا</option>
+    <option value="الخليل">الخليل</option>
+    <option value="طوباس">طوباس</option>
+    <option value="بيت لحم">بيت لحم</option>
+    <option value="قلقيلية">قلقيلية</option>
+    <option value="سلفيت">سلفيت</option>
+    <option value="نابلس">نابلس</option>
+    <option value="طولكرم">طولكرم</option>
+  </select>
+</div>
+
+<!-- هنا تظهر الحواجز -->
+<div id="checkpointsContainer">
+  <ul id="checkpointsList"></ul>
+</div>
+
+<!-- معلوماتك -->
+<footer style="text-align:center;margin-top:50px;font-size:14px;color:gray">
+  الموقع بإشراف: <strong>إبراهيم اشتية</strong><br>
+  📞 0598673474<br>
+  🟦 تيليجرام: <a href="https://t.me/a7walstreet" target="_blank">@أحوال الطرق والحواجز في الضفة الغربية و القدس</a>
+</footer>
+
+<!-- ربط ملف جافاسكربت -->
+<script src="script.js"></script>
+
+</body>
+</html>

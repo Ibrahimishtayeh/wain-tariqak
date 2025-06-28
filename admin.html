@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>لوحة تحكم المسؤول</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      direction: rtl;
+      padding: 20px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      background-color: #f8f8f8;
+    }
+    label, select {
+      margin: 5px 0;
+      display: block;
+    }
+    button {
+      margin-top: 10px;
+      padding: 6px 12px;
+      background: #2980b9;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>🔐 لوحة تحكم المسؤول</h2>
+
+<label for="governorateAdmin">اختر المحافظة:</label>
+<select id="governorateAdmin" onchange="loadAdminCheckpoints()">
+  <option disabled selected>-- اختر المحافظة --</option>
+  <option value="نابلس">نابلس</option>
+  <option value="طولكرم">طولكرم</option>
+</select>
+
+<div id="adminCheckpointsContainer"></div>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
